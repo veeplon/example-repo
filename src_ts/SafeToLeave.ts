@@ -1,4 +1,4 @@
-// import { Menu } from "wrapper/Imports"
+// import { Menu } from "github.com/octarine-public/wrapper/wrapper/Imports"
 
 // const section = Menu.AddEntryDeep(["Examples", "Utility", "Safe to leave"])
 // const keybind = section.AddKeybind("Send message")

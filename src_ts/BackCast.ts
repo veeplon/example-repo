@@ -1,4 +1,4 @@
-import { Ability, dotaunitorder_t, Entity, EventsSDK, LocalPlayer, Menu as MenuSDK } from "wrapper/Imports"
+import { Ability, dotaunitorder_t, Entity, EventsSDK, LocalPlayer, Menu as MenuSDK } from "github.com/octarine-public/wrapper/wrapper/Imports"
 
 const Abilities: string[] = [
 	"pudge_meat_hook",

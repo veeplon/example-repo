@@ -1,4 +1,4 @@
-import { EntityManager, EventsSDK, GameState, item_blink, LocalPlayer, Menu, monkey_king_tree_dance, TickSleeper } from "github.com/octarine-public/wrapper/wrapper/Imports"
+import { EntityManager, EventsSDK, GameState, item_blink, LocalPlayer, Menu, monkey_king_tree_dance, TickSleeper } from "github.com/octarine-public/wrapper/index"
 
 const MKHateTree = Menu.AddEntryDeep(["Examples", "Utility", "MK Catcher"])
 const MKHateState = MKHateTree.AddToggle("State")

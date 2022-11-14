@@ -3,4 +3,5 @@
     "editor.insertSpaces": false,
     "typescript.format.semicolons": "remove",
     "typescript.tsdk": "node_modules\\typescript\\lib",
+    "task.allowAutomaticTasks": "on",
 }

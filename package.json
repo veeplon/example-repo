@@ -35,6 +35,6 @@
 	"repository": {
 		"type": "git",
 		"directory": "/",
-		"url": "https://github.com/octarine-public/octarine-scripts/"
+		"url": "https://github.com/octarine-public/example-repo"
 	}
 }

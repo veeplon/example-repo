@@ -43,7 +43,7 @@ const SuppAbils = Menu.AddImageSelector("Ability", Abilities, new Map(Abilities.
 EventsSDK.on("PrepareUnitOrders", order => {
 	if (!State.value || (StateMiltiUnit.SelectedID !== 1 && order.Issuers[0] !== LocalPlayer!.Hero) || order.OrderType === dotaunitorder_t.DOTA_UNIT_ORDER_TRAIN_ABILITY)
 		return true
-	const abil = order.Ability
+	const abil = order.Ability_
 	if (abil === undefined || !(abil instanceof Ability) || !SuppAbils.IsEnabled(abil.Name))
 		return true
 	const target_pos = order.Target instanceof Entity ? order.Target.Position : order.Position

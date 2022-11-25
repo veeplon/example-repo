@@ -1,5 +1,3 @@
-# example-repo
-
 # Installation
 
 ```sh

@@ -46,21 +46,19 @@ const Abilities: string[] = [
 const Menu = MenuSDK.AddEntryDeep(["Examples", "Utility", "Back Cast"])
 const State = Menu.AddToggle("Enable")
 const StateMiltiUnit = Menu.AddDropdown("Multi units", ["Only your hero", "All Heroes"], 0)
-const SuppAbils = Menu.AddImageSelector(
-	"Ability",
-	Abilities,
-	new Map(Abilities.map(name => [name, true]))
-)
+const SuppAbils = Menu.AddImageSelector("Ability", Abilities, new Map(Abilities.map(name => [name, true])))
 EventsSDK.on("PrepareUnitOrders", order => {
 	if (
 		!State.value ||
 		(StateMiltiUnit.SelectedID !== 1 && order.Issuers[0] !== LocalPlayer!.Hero) ||
 		order.OrderType === dotaunitorder_t.DOTA_UNIT_ORDER_TRAIN_ABILITY
-	)
+	) {
 		return true
+	}
 	const abil = order.Ability_
-	if (abil === undefined || !(abil instanceof Ability) || !SuppAbils.IsEnabled(abil.Name))
+	if (abil === undefined || !(abil instanceof Ability) || !SuppAbils.IsEnabled(abil.Name)) {
 		return true
+	}
 	const targetPos = order.Target instanceof Entity ? order.Target.Position : order.Position
 	order.Issuers[0]?.CastPosition(abil, order.Issuers[0].Position.Extend(targetPos, 1.3))
 	return false

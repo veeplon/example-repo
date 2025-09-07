@@ -8,3 +8,6 @@ EventsSDK.on("GameStarted", () => {
 EventsSDK.on("GameEnded", () => {
 	console.log(Entity.LocalPlayer)
 })
+EventsSDK.on("EntityCreated", () => {
+console.log(Entity.LocalPlayer)
+})
